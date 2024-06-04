@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>tuto sur les axes en flexbox</title>
+    <style>
+      .container {
+        border: 5px dotted#fff;
+        width: 50%;
+        padding: 10px;
+        /* enlever le height apres avoir utiliser  */
+        height: 40vh;
+        margin: auto;
+        margin-top: 110px;
+        margin-bottom: 110px;
+      }
+      .flex-item {
+        background: orange;
+        border: 1px solid #000;
+        width: 60px;
+        height: 100px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      p,
+      h1 {
+        text-align: center;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>LE FLEXBOX</h1>
+    <!---------------------- ATTENTION !!!!-------------------- -->
+    <!---------------------- POUR MIEUX OBSERVER LES EFFETS DE FLEX-GROW,SHRINK ET BASIS NE GARDER QUE TROIS ELEMENTS-------------------- -->
+    <div class="container">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+      <!-- <div class="flex-item">4</div>
+      <div class="flex-item">5</div>
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+      <div class="flex-item">4</div>
+      <div class="flex-item">5</div> -->
+    </div>
+    <p>Expliquer par <br />SEYDINA MOHAMED DIOP <br />BINTA DIA</p>
+  </body>
+</html>

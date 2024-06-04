@@ -1,0 +1,162 @@
+/*  -------------------------- ------------------------- COURS SUR LE FLEXBOX ------------------------- -------------------------- */
+
+body {
+  background: #000;
+}
+
+/* voici les proprietes qui sont propree au container flex */
+/*
+  voici la liste des proprietes:
+  flex-direction
+  justify-content
+  align-items
+  gap
+ */
+/* voici les proprietes qui sont propree au flex-items */
+/*
+  voici la liste des proprietes:
+  align-self
+  justify-content
+  align-items
+  gap
+ */
+.container {
+  /*------------------------------ ps:  Vous pouvez COMMENTER ou ENLEVER les explications !!! ------------------------------*/
+
+  display: flex;
+  align-items: flex-start;
+
+  /*--------------------------------------- Quelques valeurs de flex-direction -------------------------------------------- */
+
+  /* flex-direction: column; */
+  /* flex-direction: row; */
+  /* flex-direction: column-reverse; */
+  /* flex-direction: row-reverse; */
+
+  /*---------------------------------------- Quelques valeurs de justify-content -------------------------------------------*/
+
+  /* justify-content: center;positione les elements au centre de l'axe principal */
+  /* justify-content: flex-start;positione les elements au debu de l'axe principal */
+  /* justify-content: flex-end;positione les elements a la fin de l'axe principal */
+  /* justify-content: space-between;cree un espace entre les items qui fait le double des espaces a l'extremite */
+  /* justify-content: space-around;cree un espace entre les items */
+  /* justify-content: space-evenly;cree un espace entre les items qui est egale à l'espaces au l'extremite */
+
+  /*------------------------------ ----------- Quelques valeurs de align-items ----------- ------------------------------ */
+
+  /* align-items: center;positione les elements au centre de l'axe transversal */
+  /* align-items: flex-start;positione les elements au debut de l'axe transversal */
+  /* align-items: flex-end;positione les elements a la fin de l'axe transversal */
+
+  /*------------------------- ---------------------- ---- flex wrap ------- ------------------- ----------------------------*/
+
+  /* flex-wrap: nowrap;valeur par defaut */
+  /* flex-wrap: wrap; rammene les elements a la ligne */
+  /* flex-wrap: wrap-reverse;rammene les elements a la ligne de façon inverser  */
+
+  /*------------------------- ---------------------- --------- gap --------- ------------------- ----------------------------*/
+
+  /* row-gap: 10px;met des espaces entre les elements dans less rangee */
+  /* column-gap: 10px;met des espaces entre les elements dans less colonnes */
+  /* gap: 10px 5px; pour combiner les deux */
+}
+
+/*------------------------- ----------------------  commenter les elements pour en garder que 3  ------------------- ----------------------------*/
+/*------------------------- ----------------------  garder aussi la propriete flex wrap ------------------- ----------------------------*/
+
+.flex-item {
+  flex-grow: 1;
+}
+
+/* 
+ vous pouvez vous amuser a augmenter la valeur de flex-grow pour voir les changements apporter
+ la valeur determinera combien d'espace le deuxieme element prendra par rapport a ses freres
+ */
+.flex-item:nth-child(2) {
+  /* flex-grow: 2; */ /* sa valeur par defaut est de 0*/
+  flex-shrink: 1; /* sa valeur par defaut est de 1*/
+  /* align-self: flex-start; */
+  /* align-self: flex-end; */
+  /* align-self: center; */
+}
+
+/* -------------------------- ---------  Voici quelques proprietes qu'on peux donner au container  --------- ------------------------------ */
+
+/*  -------------------------- --------------------------DISPLAY FLEX -------------------------- -------------------------- */
+
+/*
+   En apliquant la propriete display flex les enfants direct du container vont automatiuement se mettre en ligne. 
+*/
+
+/*  -------------------------- ------------------ FLEX-DIRECTION ET LES AXES ------------------ -------------------------- */
+
+/* 
+   Avec flexbox, il y a deux axes: axe-principal(Main axis)et l'axe transversal (cross axis).
+   Ainsi flex-direction permet de choisir l'orientation des axes mais permet aussi de les inverser.
+*/
+
+/*  -------------------------- ----------------------- JUSTIFY-CONTENT ----------------------- -------------------------- */
+
+/* 
+   justify-content permet de positioner les elements sur l'axe principal et il a une valeur par defaut qui est flex-start.
+*/
+
+/*  -------------------------- -------------------------- -------------------------- -------------------------- */
+
+/* 
+   align-items permet de positioner les elements sur l'axe transversal et il a une valeur par defaut qui est flex-start.
+   Il a des valeurs similaires a justify-content
+*/
+
+/*  -------------------------- ------------------- ATTENTION !!! -------------------- -------------------------- */
+
+/* 
+  CES DEUX DERNIERES PROPRIETES PEUVENT CHANGER EN FONTION DE L'ORIENTATION DES AXES.
+  C'EST À DIRE QUE LA PROPRIETES flex-direction, DETERMINE LEQUE DES DEUX EST APTE A ETRE UTILISER.
+ */
+
+/*  -------------------------- ----------------------- FLEX-WRAP ----------------------- -------------------------- */
+
+/* 
+  Si j'ai beaucoup d'item et que je veux quemes items reviennent a la ligne au lieux de s'entasser,
+  la propriete flex-wrap me permet de les remettre a la ligne.
+  Par defaut sa valeur est nowrap.
+  */
+
+/*  -------------------------- ----------------------- -- GAP -- ----------------------- -------------------------- */
+
+/* 
+  Gap vas nous permetre d'ajouter des goutieres(espace) entre nos elements.
+ */
+
+/* -------------------------- Voici quelques proprietes qu'on peux donner au items   ------------------------------ */
+
+/*  -------------------------- ----------------------- align-self ----------------------- -------------------------- */
+
+/* 
+  align-self permet de positioner un element independemment des autres.
+  Elle presente les memes proprietes que align items.
+ */
+
+/*  -------------------------- ----------------------- Annonce !!!! ----------------------- -------------------------- */
+
+/* 
+  les deux proprietes suivants se ressemble puisqu'elle vont determiner la taille de nos element en les autorisant soit a s'agrandir ,
+  soit a retrecir.
+  pour mieux constater les effets, gardons seulement septs elements dans le container
+  Comme on peux le voir les element n'occupent pas toute l'espace
+*/
+
+/*  -------------------------- ------------------------ flex-grow ------------------------ -------------------------- */
+
+/* 
+  flex-grow donne l'autorisation au elements de s'agrandir pour combler l'espace restante. 
+ */
+
+/*  -------------------------- ----------------------- flex-shrink ----------------------- -------------------------- */
+
+/* 
+  flex-shrink donne l'autorisation au elements de se retrecir. 
+ */
+
+/*  -------------------------- ----------------------- flex-basis ----------------------- -------------------------- */
